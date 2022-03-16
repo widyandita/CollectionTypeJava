@@ -1,0 +1,29 @@
+package collection.type;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListHari {
+
+    public static void main(String[] args) {
+        List<String> hari = new ArrayList<>();
+        hari.add("Senin");
+        hari.add("Selasa");
+        hari.add("Rabu");
+        hari.add("Kamis");
+        hari.add("Kamis");
+        hari.add("Jumat");
+
+        System.out.println("List hari awal :");
+        for (int i=0; i<hari.size(); i++) {
+            System.out.println("\t index-"+ i +" = " + hari.get(i));
+        }
+
+        hari.remove("Kamis");
+
+        System.out.println("\nList hari akhir :");
+        for (int i=0; i<hari.size(); i++) {
+            System.out.println("\t index-"+ i +" = " + hari.get(i));
+        }
+    }
+}
