@@ -1,0 +1,29 @@
+package collection.type;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapHari{
+
+    public static void main(String[] args) {
+
+        Map<String, Hari> hari = new HashMap();
+        hari.put("key-1", new Hari("Senin", "14"));
+        hari.put("key-2", new Hari("Selasa", "15"));
+        //hari.put("key-3", new Hari("Rabu", "16"));
+        hari.put("key-3", new Hari("Rabu", "16"));
+
+        System.out.println("Map hari awal: (size = "+ hari.size() +")");
+        for (String key : hari.keySet()) {
+            System.out.println("\t " + key + " : " + hari.get(key));
+        }
+
+        hari.remove("key-2");
+
+        System.out.println("\nMap hari akhir: (size = "+ hari.size() +")");
+
+        for (String key : hari.keySet()) {
+            System.out.println("\t " + key + " : " + hari.get(key));
+        }
+    }
+}
