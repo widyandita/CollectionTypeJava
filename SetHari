@@ -1,0 +1,28 @@
+package collection.type;
+
+import java.util.*;
+
+public class SetHari {
+
+    public static void main(String[] args) {
+
+        Set<String> hari = new HashSet<>();
+        hari.add("Senin");
+        hari.add("Selasa");
+        hari.add("Rabu");
+        hari.add("Kamis");
+        hari.add("Jumat");
+
+        System.out.println("Set hari awal: (ukuran = " + hari.size() +")");
+        for (Iterator iterator = hari.iterator(); iterator.hasNext();) {
+            System.out.println("\t" + iterator.next());
+        }
+
+        hari.remove("Kamis");
+
+        System.out.println("\nSet hari akhir: (ukuran = " + hari.size() +")");
+        for (Iterator iterator = hari.iterator(); iterator.hasNext();) {
+            System.out.println("\t" + iterator.next());
+        }
+    }
+}
